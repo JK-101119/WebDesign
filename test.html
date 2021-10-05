@@ -1,2 +1,197 @@
-Hello Git
-Hi VS Code!
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-transform: uppercase;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(#e6e7e7, #a2acb1);
+    }
+
+    /* Background container. */
+    #bg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    #outer {
+      position: absolute;
+      z-index: -1;
+    }
+
+    /* Background outer triangle light-grey colored. */
+
+    #triangle-outer {
+      position: relative;
+      border-top: 320px solid transparent;
+      border-left: 420px solid rgba(255, 255, 255, 0.4);
+      border-bottom: 320px solid transparent;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(50px);
+    }
+
+    /* Background inner triangle white colored. */
+
+    #triangle-inner {
+      border-top: 275px solid transparent;
+      border-left: 375px solid white;
+      border-bottom: 275px solid transparent;
+    }
+
+    /* Login start from here. */
+    #container-box {
+      position: absolute;
+      width: 70vw;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    /* Full login container */
+    #login-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-right: 120px;
+      margin-top: 120px;
+    }
+
+    /* Login system heading. */
+
+    #head {
+      font-size: small;
+      margin-left: -110px;
+    }
+
+    /* Cyan horizontal line. */
+    #hr-line {
+      display: flex;
+      margin-right: 50px;
+      padding: 10px;
+    }
+
+    #hr-line-pre {
+      display: inline-block;
+      height: 5px;
+      width: 50px;
+      background-color: #2fe7e7;
+    }
+
+    #hr-line-post {
+      height: 2px;
+      width: 100px;
+      background-color: #2fe7e7;
+    }
+
+    /* Text input section. */
+
+    input {
+      font-size: 15px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #02020233;
+      padding: 8px 0;
+      margin: 5px;
+    }
+
+    input:hover {
+      border-bottom: 2px solid;
+    }
+
+    /* Button section. */
+
+    a {
+      text-decoration: none;
+      color: #0200009f;
+      padding: 10px;
+      background-color: #bdc3c7;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    a:hover {
+      background-color: #94c5db;
+      color: #000000;
+      border: 1px solid;
+    }
+
+    /* Forget button. */
+
+    #forget-btn {
+      margin-top: 20px;
+      background-color: #c7d6dd;
+    }
+
+    /* Enter button. */
+
+    #enter-btn {
+      margin-top: 100px;
+      margin-left: 250px;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Background section. -->
+
+  <div id="bg">
+    <div id="outer">
+      <div id="triangle-outer"></div>
+    </div>
+
+    <div id="inner">
+      <div id="triangle-inner"></div>
+    </div>
+  </div>
+<!-- Login section. -->
+
+  <div id="container-box">
+    <div id="login-box">
+      <div id="head">
+        <h2>log into</h2>
+        <h1>system</h1>
+      </div>
+<!-- Horizontal line below login heading. -->
+
+      <div id="hr-line">
+        <span id="hr-line-pre"></span>
+        <span id="hr-line-post"></span>
+      </div>
+<!-- Input and button. -->
+      <div id="input-box">
+        <input type="text" placeholder=" login..." autofocus tabindex="1" /><br />
+        <input type="password" placeholder=" password..." tabindex="2" />
+      </div>
+      <div id="forget-btn">
+        <a href="http://" target="_blank" tabindex="4">forget password ?</a>
+      </div>
+      <div id="enter-btn">
+        <a href="http://" target="_blank" tabindex="3">enter</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
