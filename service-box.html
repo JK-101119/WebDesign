@@ -12,33 +12,34 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      text-decoration: none;
       font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    .container {
+    /* This is universal flex box preoperty */
+    .uni-flex {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+    }
+
+    /* This is main container */
+    .container {
       flex-wrap: wrap;
       background-color: #30336b;
     }
 
+    /* This is sevice-box */
     .service {
       display: flex;
       align-items: center;
     }
 
-    .box-2:hover {
-      background-color: #ff7979a8;
-    }
-
+    /* This is for heading of box-1 that contains numbers from 1 to 7. */
     .box-1 h1 {
       position: relative;
       top: 2px;
@@ -47,16 +48,19 @@
       font-size: 150px;
     }
 
-    a {
-      text-decoration: none;
-    }
-
+    /* This is for box-2 that contains icon and service description. */
     .box-2 {
       height: 107px;
       width: 200px;
       background-color: #ff7979;
       border-radius: 10px;
     }
+
+    .box-2:hover {
+      background-color: #ff7979a8;
+    }
+
+    /* This is for service icons */
 
     .fas {
       display: block;
@@ -67,6 +71,7 @@
       text-align: center;
     }
 
+    /* This is for service name */
     h3 {
       padding: 10%;
       text-align: center;
@@ -75,9 +80,10 @@
   </style>
 </head>
 
-<body>
-  <div class="container">
-
+<body class="uni-flex">
+  <!-- This is mian container. -->
+  <div class="container uni-flex">
+    <!-- This is service box-1 -->
     <div class="service">
       <div class="box-1">
         <h1>1</h1>
@@ -88,7 +94,7 @@
         </div>
       </a>
     </div>
-
+    <!-- This is service box-2 -->
     <div class="service">
       <div class="box-1">
         <h1>2</h1>
@@ -99,7 +105,7 @@
       </div>
       </a>
     </div>
-
+    <!-- This is service box-3 -->
     <div class="service">
       <div class="box-1">
         <h1>3</h1>
@@ -110,6 +116,7 @@
       </div>
       </a>
     </div>
+    <!-- This is service box-4 -->
     <div class="service">
       <div class="box-1">
         <h1>4</h1>
@@ -119,6 +126,7 @@
         <h3>Help Desk Support</h3>
       </div></a>
     </div>
+    <!-- This is service box-5 -->
     <div class="service">
       <div class="box-1">
         <h1>5</h1>
@@ -129,6 +137,7 @@
       </div>
       </a>
     </div>
+    <!-- This is service box-6 -->
     <div class="service">
       <div class="box-1">
         <h1>6</h1>
@@ -139,6 +148,7 @@
         </div>
       </a>
     </div>
+    <!-- This is service box-7 -->
     <div class="service">
       <div class="box-1">
         <h1>7</h1>
